@@ -1,1 +1,1 @@
-# js-it-generation
+# bootcamp-it-generation
