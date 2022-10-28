@@ -1,18 +1,17 @@
 /*
  * Наслідування з extends та super
  */
-class Developer {
+class User {
   #login;
   #email;
 
-  constructor({ countOfProjects, firstName, lastName, age, login, email }) {
+  constructor({ firstName, lastName, age, login, email } = {}) {
     // this = {}
     this.firstName = firstName;
     this.lastName = lastName;
     this.userAge = age;
     this.#login = login;
     this.#email = email;
-    this.countOfProjects = countOfProjects;
     // return this;
   }
 
@@ -34,10 +33,6 @@ class Developer {
 
   getFullName() {
     return `${User.trimStr(this.firstName)} ${User.trimStr(this.lastName)}`;
-  }
-
-  doDeveloperWork() {
-    console.log(`Роблю якусь роботу`);
   }
 
   static trimStr(str) {
@@ -45,47 +40,27 @@ class Developer {
   }
 }
 
-class Manager {
-  #login;
-  #email;
+class Developer extends User {
+  constructor({ countOfProjects, ...otherProps }) {
+    super(otherProps);
 
-  constructor({ managerProp, firstName, lastName, age, login, email }) {
-    // this = {}
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.userAge = age;
-    this.#login = login;
-    this.#email = email;
+    this.countOfProjects = countOfProjects;
+  }
+
+  doDeveloperWork() {
+    console.log(`Роблю якусь роботу`);
+  }
+}
+
+class Manager extends User {
+  constructor({ managerProp, ...otherProps } = {}) {
+    super(otherProps);
+
     this.managerProp = managerProp;
-    // return this;
-  }
-
-  get login() {
-    return this.#login;
-  }
-
-  set login(newLogin) {
-    this.#login = newLogin;
-  }
-
-  get email() {
-    return this.#email;
-  }
-
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-
-  getFullName() {
-    return `${User.trimStr(this.firstName)} ${User.trimStr(this.lastName)}`;
   }
 
   doManagerWork() {
     console.log(`Роблю якусь роботу`);
-  }
-
-  static trimStr(str) {
-    return str.trim();
   }
 }
 
@@ -97,6 +72,8 @@ const user = new Developer({
   login: 'vcvd',
   email: 'iseegi@sak.sx',
 });
+
+user.doDeveloperWork();
 
 console.log(user);
 
@@ -110,3 +87,15 @@ const someManager = new Manager({
 });
 
 console.log(someManager);
+
+// const obj = {
+//   firstName: 'Leona',
+//   lastName: 'Cole',
+// };
+
+// const newObj = Object.create(obj);
+
+// Object.setPrototypeOf(newObj, null);
+
+// console.log('obj: ', obj);
+// console.log('newObj: ', newObj);
