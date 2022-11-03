@@ -32,7 +32,7 @@ const pictures = [
 ];
 
 // const titleEl = document.querySelector('.js-title');
-// titleEl.innerHTML = '<span class="some-class">Main</span> title';
+// titleEl.textContent = '<span class="some-class">Main</span> title';
 
 /*
 <li class="gallery-item">
@@ -42,25 +42,35 @@ const pictures = [
 </li>
 */
 
-const galleryListEl = document.querySelector('.js-gallery');
+// const galleryListEl = document.querySelector('.js-gallery');
 
 // Функція для створення карточки makeGalleryCard(cardInfo)
-const makeGalleryCard = ({ width, height, url, alt } = {}) => {
-  return `
-    <li class="gallery-item">
-      <a href="#">
-        <img src="${url}" alt="${alt}" width="${width}" height="${height}">
-      </a>
-    </li>
-  `;
-};
+// const makeGalleryCard = ({ width, height, url, alt } = {}) => {
+//   return `
+//     <li class="gallery-item">
+//       <a href="#">
+//         <img src="${url}" alt="${alt}" width="${width}" height="${height}">
+//       </a>
+//     </li>
+//   `;
+// };
 
+// через map
 // Створення масиву рядків із елементами
-const galleryItemsEl = pictures.map((el, idx, arr) => {
-  return makeGalleryCard(el);
-});
-
-console.log(galleryItemsEl);
+// const galleryItemsEl = pictures.map((el, idx, arr) => {
+//   return makeGalleryCard(el);
+// });
 
 // Вставка елементів на сторінку
-galleryListEl.innerHTML = galleryItemsEl.join('');
+// galleryListEl.innerHTML = galleryItemsEl.join('');
+// galleryListEl.insertAdjacentHTML('beforeend', galleryItemsEl.join());
+
+// через reduce
+// Створення суцільного рядка із елементів
+// const galleryItemsEl = pictures.reduce((acc, el, idx, arr) => {
+//   return acc + makeGalleryCard(el);
+// }, '');
+
+// Вставка елементів на сторінку
+// galleryListEl.innerHTML = galleryItemsEl;
+// galleryListEl.insertAdjacentHTML('beforeend', galleryItemsEl);
