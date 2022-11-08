@@ -1,1 +1,39 @@
-# bootcamp-it-generation
+# Занятие 15:
+
+- Термінал
+  - [Шпора 1](https://tproger.ru/translations/bash-cheatsheet/)
+  - [Шпора 2](https://habr.com/ru/company/ruvds/blog/445270/)
+  - Відкрити
+    - `control + ~`
+    - `view > teminal`
+    - `command + shift + p`
+  - Основні команди
+    - поточне місце знаходження (pwd)
+    - список файлів і директорій (ls)
+    - навігація (cd)
+    - очистити термінал `clear` або `control + l`
+    - створення файла (touch)
+    - створення директорії (mkdir)
+    - перейменування/переміщення (mv)
+    - видалення (rm)
+    - дізнатися інформацію про команду (man команда/команда --help)
+- Node.js та npm
+  - встановлення
+  - ініціалізація та package.json
+  - [npmjs.com](https://www.npmjs.com/)
+  - робота з пакетами
+    - встановлення
+    - видалення
+  - CommonJS модулі
+  - npm-скрипти
+    - pre та post
+- Транспіляція кода
+  - [Babel](https://babeljs.io/)
+  - CLI та npm-скрипти
+  - Пресети
+  - [Browserslist](https://github.com/browserslist/browserslist)
+- [Сборщик Parcel](https://parceljs.org/)
+- [ECMAScript модулі](https://exploringjs.com/es6/ch_modules.html)
+  - Дефолтний (default) експорт та імпорт
+  - Іменований (named) експорт та імпорт
+  - Namespace import

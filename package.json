@@ -1,0 +1,32 @@
+{
+  "name": "bootcamp-it-generation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel src/js/index.js -d build/js/",
+    "autoprefixer": "npx postcss src/css/styles.css --use autoprefixer -d build/css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olexiy-repin/bootcamp-it-generation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olexiy-repin/bootcamp-it-generation/issues"
+  },
+  "homepage": "https://github.com/Olexiy-repin/bootcamp-it-generation#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0"
+  },
+  "browserslist": "last 2 versions",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2"
+  }
+}
