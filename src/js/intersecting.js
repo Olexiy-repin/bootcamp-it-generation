@@ -12,3 +12,19 @@ sectionsEl.forEach(el => {
     255
   )}, ${randomInteger(0, 255)})`;
 });
+
+const options = {
+  root: null,
+  rootMargin: '0px 0px 400px 0px',
+  threshold: 1,
+};
+
+const callback = (entries, observer) => {
+  if (entries[0].isIntersecting) {
+    console.log('Hello');
+  }
+};
+
+const sectionObserver = new IntersectionObserver(callback, options);
+
+sectionObserver.observe(targetSecEl);
